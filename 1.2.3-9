@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {        //1.2.4
+    int liczba;
+    printf("podaj liczbe calkowita: ");
+    scanf("%d",&liczba);
+    printf("%d", liczba);
+    return 0;
+}
+
+........................................................................................................................................
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {            //1.2.5
+    double liczba;
+    printf("podaj liczbe wymierna: "); //liczba wymierna to taka ktora mozna przedstawic za pomoca ulamka zwyklego
+    scanf("%f",&liczba);
+    printf("%f", liczba);
+    return 0;
+}
+
+........................................................................................................................................
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {            //1.2.6
+    int a, b, c;
+    printf("podaj 3 liczby: ");
+    scanf("%d %d %d", &a, &b, &c);
+    printf("%d\n%d\n%d", a, b,c );
+    return 0;
+}
+
+........................................................................................................................................
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {        //1.2.7
+    int liczba;
+    printf("podaj liczbe calkowita: ");
+    scanf("%d",&liczba);
+    printf("%d", liczba+1);
+    return 0;
+}
+
+........................................................................................................................................
+#include <stdio.h>        //1.2.8
+#include <stdlib.h>
+
+int main() {            
+    int a, b, c;
+    printf("podaj 3 liczby calkowite: ");
+    scanf("%d %d %d", &a, &b, &c);
+    printf("%d", (a+b+c)/3 );
+    return 0;
+}
+
+........................................................................................................................................
+#include <stdio.h>              //1.2.9
+#include <stdlib.h>
+#include <math.h>
+
+int main() {
+    float x;
+    do{
+        x=0;
+        printf("Podaj nieujemna liczbe wymierna x: ");
+        scanf("%f", &x);
+    }while(x<0);
+    printf("pierwiastek z 'x' = %f", sqrt(x) );
+    return 0;
+}
