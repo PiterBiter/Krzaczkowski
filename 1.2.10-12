@@ -1,0 +1,45 @@
+#include <stdio.h>              //1.2.10
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x1;
+    float x2;
+    printf("Podaj liczbe calkowita: ");
+    scanf("%d", &x1);
+    printf("Podaj liczbe zmienno przecinkowa: ");
+    scanf("%f", &x2);
+    printf( "Wartosc bezwzgledna liczby %d to %d\n", x1, abs(x1));
+    printf( "Wartosc bezwzgledna liczby %f to %f\n", x2, fabs(x2));
+    return 0;
+}
+
+.......................................................................................................................
+#include <stdio.h>              //1.2.11
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float liczba;
+    printf("Podaj liczbe: ");
+    scanf("%f", &liczba);
+    printf("%.2f", liczba);
+    return 0;
+}
+
+.......................................................................................................................
+#include <stdio.h>              //1.2.12
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x;
+    printf("Podaj liczbe: ");
+    scanf( "%f", &x);
+    printf( "%e", x);
+
+    return 0;
+}
