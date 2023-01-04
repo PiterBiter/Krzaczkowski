@@ -1,0 +1,135 @@
+#include <stdlib.h>           //1.3.1
+#include <math.h>
+
+int main()
+{
+    int x;
+    printf("Podaj liczbe: ");
+    scanf( "%d", &x);
+    printf( "Wartosc bezwzgledna liczby %d to %d\n", x, abs(x));
+
+    return 0;
+}
+
+.............................................................................................................
+#include <stdio.h>              //1.3.2
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a, b;
+    printf("Podaj dwie liczby: ");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    if(a==b){
+        printf("%d", a);
+    }
+    else if(a>b){
+        printf("%d jest wieksze", a);
+    }
+    else{
+        printf("%d jest wieksze", b);
+    }
+    return 0;
+}
+
+.............................................................................................................
+#include <stdio.h>              //1.3.3
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, c, x=0;
+    printf("Podaj trzy liczby: ");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+    if(a!=b && a!=c && b!=c){
+        x=a;
+        if(x<b){
+            x=b;
+        }
+        if(c>x){
+            x=c;
+        }
+        printf("najwieksza jest %d", x);
+    }
+    if(a==b && b==c){
+        printf("wszystkie liczby sa takie same ");
+    }
+    if(a==b && a!=c){
+        if(a>c){
+            printf("%d i %d sa takie same i sa wieksze od %d", a, b, c);
+        }
+        else{
+            printf("%d i %d sa takie same i sa mniejsze od %d", a, b, c);
+        }
+    }
+    if(a==c && a!=b){
+        if(a>b){
+            printf("%d i %d sa takie same i sa wieksze od %d", a, c, b);
+        }
+        else{
+            printf("%d i %d sa takie same i sa mniejsze od %d", a, c, b);
+        }
+    }
+    if(b==c && b!=a){
+        if(b>a){
+            printf("%d i %d sa takie same i sa wieksze od %d", b, c, a);
+        }
+        else{
+            printf("%d i %d sa takie same i sa mniejsze od %d", c, b, a);
+        }
+    }
+    return 0;
+}
+
+.............................................................................................................
+#include <stdio.h>              //1.3.4
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, x=0;
+    printf("Podaj dwie liczby: ");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    if(abs(a)<abs(b)){
+        printf("Liczba bezwgledna z %d jest wieksza.", b);
+    }
+    else{
+        printf("Liczba bezwgledna z %d jest wieksza.", a);
+    }
+    return 0;
+}
+.............................................................................................................
+#include <stdio.h>              //1.3.5
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, c, h, x;
+    float pole;
+    do{
+    printf("1-wysokosc i podstawa \n2- wszystkie boki\n");
+    scanf("%d", &x);
+
+    if(x==1){
+        printf("Podaj wyskosc i dlugosc podstawy: ");
+        scanf("%d %d", &a, &h);
+        pole=(h*a/2);
+        printf("Pole trojkata wynosi: %.2f", pole);
+    }
+    else if(x==2){
+        printf("Podaj wszystkie boki trojkata: ");
+        scanf("%d %d %d", &a, &b, &c);
+        pole=(a+b+c)/2;
+        printf("Pole trojkata wynosi: %.2f", pole);
+    }
+    }while(x<1 || x>2);
+    return 0;
+}
