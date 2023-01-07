@@ -181,3 +181,50 @@ int main()
     }while(toupper(getch())=='T');
     return 0;
 }
+
+.............................................................................................................
+#include <stdio.h>              //1.3.9
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    do{
+        int x;
+        float a, b, wynik=0;
+        do{
+            printf("Wybierz co chcesz robic");
+            printf("\n1 - dodawanie \n2 - odejmowanie \n3 - mnozenie \n4 - dzielenie \n5 - potegowanie \n");
+            scanf("%d", &x);
+        }while(x<1 || x>5);
+        printf("Podaj dwie liczby: ");
+        scanf("%f \n %f", &a, &b);
+        if(x==1){
+            wynik=a+b;
+            printf("Wynik dodawania = %.2f", wynik);
+        }
+        else if(x==2){
+            wynik=a-b;
+            printf("Wynik odejmowania = %.2f", wynik);
+        }
+        else if(x==3){
+            wynik=a*b;
+            printf("Wynik mnozenia = %.2f", wynik);
+        }
+        else if(x==4){
+            wynik=a/b;
+            printf("Wynik dzielenia = %.2f", wynik);
+        }
+        else if(x==5){
+            printf(" \Liczba %.2f jest podstawa potegi, a liczba %.2f jest wykladnikiem \n", a, b);
+            wynik=1;
+            for(int i=1; i<=b; i++){
+                wynik=wynik*a;
+            }
+            printf("wynik potegaowania = %.2f", wynik);
+        }
+    printf("\nJesli chcesz powtorzyc program nacisnij 't' \n");
+    }while(toupper(getch())=='T');
+
+    return 0;
+}
